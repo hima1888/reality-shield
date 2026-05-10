@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+python-multipart
+pymongo
+PyJWT
+passlib
+bcrypt
+opencv-python
+transformers

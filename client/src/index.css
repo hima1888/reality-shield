@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #020617; /* slate-950/900 */
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Custom styles with native tailwind colors */
+@layer components {
+  .glass-panel {
+    @apply bg-slate-900/50 backdrop-blur-md border border-slate-700 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] rounded-xl;
+  }
+  
+  .neon-button {
+    @apply relative overflow-hidden bg-gradient-to-r from-purple-600 to-cyan-500 text-white font-bold py-3 px-8 rounded-full 
+           hover:shadow-[0_0_20px_rgba(6,182,212,0.6)] transition-all duration-300 transform hover:scale-105 active:scale-95;
+  }
+  
+  .cyber-input {
+    @apply w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white 
+           focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-all;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #7c3aed;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}
